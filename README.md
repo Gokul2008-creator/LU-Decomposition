@@ -32,12 +32,19 @@ Developed by:GOKUL N
 RegisterNumber:26009897 
 '''
 import os
+
 os.environ["OPENBLAS_NUM_THREADS"]="1"
+
 import numpy as np
+
 from scipy.linalg import lu
+
 a=np.array(eval(input()))
+
 P,L,U=lu(a)
+
 print(L)
+
 print(U)
 
 (ii) To find the LU Decomposition of a matrix
@@ -47,13 +54,21 @@ Developed by: GOKUL N
 RegisterNumber: 26009897
 '''
 import os
+
 os.environ["OPENBLAS_NUM_THREADS"]="1"
+
 import numpy as np
+
 from scipy.linalg import lu_factor,lu_solve
+
 a=np.array(eval(input()))
+
 b=np.array(eval(input()))
+
 lu,pivot=lu_factor(a)
+
 x=lu_solve((lu,pivot),b)
+
 print(x)
 
 ## Output:
